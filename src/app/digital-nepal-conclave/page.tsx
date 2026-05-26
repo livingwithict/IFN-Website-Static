@@ -2,8 +2,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import Link from 'next/link';
-import SlideshowHero from '@/components/SlideshowHero';
 import { FiArrowRight } from 'react-icons/fi';
+import SlideshowHero from '@/components/SlideshowHero';
+
 
 export const metadata = {
   title: 'Digital Nepal Conclave | ICT Foundation Nepal',
@@ -27,7 +28,7 @@ export default function DigitalNepalConclave() {
         slides={[
           {
             id: 'event-1',
-            src: '/images/ICTAward.jpg',
+            src: '/images/events/Conclave.jpg',
             alt: 'Digital Nepal Conclave event',
           },
         ]}

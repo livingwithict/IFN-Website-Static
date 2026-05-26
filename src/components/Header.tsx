@@ -44,6 +44,7 @@ const navLinks: NavLink[] = [
     children: [
       { label: "Digital Samvad", href: "digital-samvad" },
       { label: "ICT Gyan", href: "ict-gyan" },
+      { label: "Startup & Idea Fest", href: "ideafest" },
       { label: "Business Incubation Service", href: "incubation" },
       { label: "Google Career Certification", href: "google-career-certificates" },
     ],

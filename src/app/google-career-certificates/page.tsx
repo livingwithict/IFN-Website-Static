@@ -18,7 +18,7 @@ export default function GoogleCareerCertificatesPage() {
         <section className="relative bg-gray-900 text-white">
           <div className="absolute inset-0">
             <Image
-              src="/images/scholarship-hero.svg"
+              src="/images/events/Google.png"
               alt="Google Career Certificates Scholarship"
               fill
               style={{ objectFit: 'cover' }}
@@ -50,12 +50,7 @@ export default function GoogleCareerCertificatesPage() {
                   View Courses
                 </a>
               </div>
-
-              <div className="mt-6 flex items-center gap-6">
-                <Image src="/images/google-logo.svg" alt="Google" width={96} height={32} />
-                <Image src="/images/merojob-logo.svg" alt="Mero Job" width={96} height={32} />
-                <Image src="/images/coursera-logo.svg" alt="Coursera" width={96} height={32} />
-              </div>
+              
             </div>
           </div>
         </section>
@@ -93,17 +88,7 @@ export default function GoogleCareerCertificatesPage() {
                 'AI Professional Certificate',
               ].map((c) => (
                 <div key={c} className="rounded-lg bg-white p-4 shadow-sm">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10">
-                      <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h3 className="text-md font-semibold text-[#0E2557]">{c}</h3>
-                      <p className="text-sm text-gray-500">Duration: 3-6 months (complete within 6 months)</p>
-                    </div>
-                  </div>
+                  <h3 className="text-md font-semibold text-[#0E2557]">{c}</h3>
                 </div>
               ))}
             </div>
@@ -135,20 +120,7 @@ export default function GoogleCareerCertificatesPage() {
               <li>Monthly progress will be monitored by the team to ensure program quality.</li>
               <li>A minimum 70% program completion rate is expected from all scholarship recipients.</li>
               <li>All learner data is handled with full confidentiality in accordance with the laws of Nepal.</li>
-              <li>Application form: <a href="#apply" className="text-primary underline">Insert Form Link</a></li>
             </ul>
-          </div>
-        </section>
-
-        {/* Timeline */}
-        <section id="timeline" className="py-16 bg-white">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="mb-6 text-3xl font-bold text-[#0E2557]">Program Timeline</h2>
-            <ol className="list-inside list-decimal space-y-2 text-gray-700">
-              <li>Application window: 22nd April 2026 until 6th May 2026</li>
-              <li>Shortlist and finalize learners by 13th May 2026</li>
-              <li>Onboarding learners in Coursera by 15th May 2026</li>
-            </ol>
           </div>
         </section>
 
@@ -158,7 +130,7 @@ export default function GoogleCareerCertificatesPage() {
             <h2 className="mb-4 text-3xl font-bold">Ready to Apply?</h2>
             <p className="mb-6 text-lg text-gray-100">Apply for the Google Career Certificates scholarship through the form. Seats are limited.</p>
             <a
-              href="#apply"
+              href="https://forms.gle/zbTDdUzGnYD5VP6i7"
               className="inline-block rounded-md bg-primary px-8 py-3 font-semibold text-white hover:opacity-95"
             >
               Open Application Form

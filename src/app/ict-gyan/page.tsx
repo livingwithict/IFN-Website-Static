@@ -2,10 +2,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import SlideshowHero from '@/components/SlideshowHero';
+import Link from 'next/link';
+import { FiArrowRight } from 'react-icons/fi';
 
 export const metadata = {
   title: 'ICT Gyan | ICT Foundation Nepal',
-  description: 'Educational knowledge-sharing platform providing ICT training and professional development.',
+  description: 'Knowledge-sharing platform providing ICT training and professional development with ICT related contents',
 };
 
 export default function IctGyan() {
@@ -16,7 +18,7 @@ export default function IctGyan() {
         <SlideshowHero
           // label="ICT Gyan"
           title="ICT Gyan"
-          description="Comprehensive knowledge-sharing and training platform offering ICT education, professional development, and skill enhancement programs for individuals and organizations."
+          description="Knowledge-sharing platform providing ICT training and professional development with ICT related contents."
           // breadcrumbs={[
           //   { href: '/', label: 'Home' },
           //   { href: '/#initiatives', label: 'Events' },
@@ -25,65 +27,15 @@ export default function IctGyan() {
           slides={[
             {
               id: 'event-1',
-              src: '/images/ICTAward.jpg',
-              alt: 'Digital Nepal Conclave event',
+              src: '/images/events/ICT-Gyan.jpg',
+              alt: 'ICT Gyan',
             },
           ]}
           actions={[
-            { label: 'Learn More', href: '#', variant: 'primary' },
+            { label: 'Learn More', href: 'https://ictgyan.com', variant: 'primary' },
             // { label: 'Register Now', href: '#register', variant: 'secondary' },
           ]}
         />
-
-        {/* Event Details Section */}
-        <section className="py-16 lg:py-24 bg-white">
-          <div className="mx-auto max-w-6xl px-6">
-            <div className="grid gap-12 lg:grid-cols-3">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                    <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-[#0E2557]">Programs</h3>
-                  <p className="text-gray-600">Ongoing throughout year<br /><span className="text-sm text-gray-500">Start dates vary by program</span></p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                    <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-[#0E2557]">Format</h3>
-                  <p className="text-gray-600">Online & Offline<br /><span className="text-sm text-gray-500">Flexible learning options</span></p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                    <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="mb-2 text-lg font-semibold text-[#0E2557]">Contact</h3>
-                  <p className="text-gray-600">info@ictfoundation.org.np<br /><span className="text-sm text-gray-500">+977-1-XXXXX</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Overview Section */}
         <section id="overview" className="py-16 lg:py-24 bg-gray-50">
@@ -91,19 +43,38 @@ export default function IctGyan() {
             <h2 className="mb-8 text-3xl lg:text-4xl font-bold text-[#0E2557]">Event Overview</h2>
             <div className="prose prose-lg max-w-none text-gray-700">
               <p className="mb-6">
-                ICT Gyan is a comprehensive knowledge-sharing platform dedicated to providing quality ICT education and professional development. Through structured training programs, workshops, and certification courses, we develop Nepal's digital talent pool.
+                ICT Gyan is dedicated to making digital literacy accessible for all, recognizing its role in enhancing productivity and quality of life. The platform offers resources tailored to Nepali learners, covering everything from basic computer skills to advanced digital tools. 
               </p>
               <p className="mb-6">
-                Our programs cater to diverse audiences—from students seeking ICT skills to professionals seeking career advancement. We partner with industry experts and educational institutions to deliver cutting-edge, industry-relevant training.
-              </p>
-              <p>
-                ICT Gyan empowers individuals to build careers in technology and helps organizations develop their ICT capabilities for sustainable growth and digital transformation.
+                By bridging the digital divide, ICT Gyan not only enhances individual skills but also contributes to Nepal's socio-economic development.
               </p>
             </div>
           </div>
         </section>
+       
+        <section>
+          <div className="mt-10 my-10 mx-auto max-w-4xl px-6">
+            <Link href="https://nepal-ai.org" className="inline-flex items-center gap-2 rounded-lg gradient-primary px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-primary/20 transition-all hover:shadow-md hover:shadow-primary/25 hover:brightness-110">
+              Learn More
+              <FiArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </section>
 
-        {/* Programs Section */}
+       {/* CTA Section */}
+        <section className="py-16 lg:py-24 bg-gradient-to-r from-[#0E2557] to-[#1a3a7a]">
+          <div className="mx-auto max-w-4xl px-6 text-center text-white">
+            <h2 className="mb-6 text-3xl lg:text-4xl font-bold">Become a social contributor</h2>
+            <p className="mb-8 text-lg text-gray-100 max-w-2xl mx-auto">
+              You can join ICT Gyan as a video contributor.
+            </p>
+            <button className="inline-block rounded-lg bg-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg active:scale-95">
+              Drop Information
+            </button>
+          </div>
+        </section>
+
+        {/* Programs Section
         <section className="py-16 lg:py-24 bg-white">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="mb-12 text-3xl lg:text-4xl font-bold text-[#0E2557]">Training Programs</h2>
@@ -159,40 +130,10 @@ export default function IctGyan() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Certifications Section */}
-        <section className="py-16 lg:py-24 bg-gray-50">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="mb-8 text-3xl lg:text-4xl font-bold text-[#0E2557]">Industry Certifications</h2>
-            <p className="mb-8 text-gray-600 text-lg">
-              Our programs are designed to prepare you for industry-recognized certifications. Upon completion, participants can pursue credentials from major certification bodies.
-            </p>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-lg bg-white p-6 border-l-4 border-primary">
-                <h3 className="mb-2 text-lg font-semibold text-[#0E2557]">Technical Certifications</h3>
-                <p className="text-gray-600">Microsoft, Cisco, CompTIA, AWS, Google Cloud, and other industry-recognized certifications.</p>
-              </div>
-              <div className="rounded-lg bg-white p-6 border-l-4 border-primary">
-                <h3 className="mb-2 text-lg font-semibold text-[#0E2557]">Professional Development</h3>
-                <p className="text-gray-600">Leadership, project management, agile methodologies, and professional skills certifications.</p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-gradient-to-r from-[#0E2557] to-[#1a3a7a]">
-          <div className="mx-auto max-w-4xl px-6 text-center text-white">
-            <h2 className="mb-6 text-3xl lg:text-4xl font-bold">Start Your Learning Journey</h2>
-            <p className="mb-8 text-lg text-gray-100 max-w-2xl mx-auto">
-              Choose from our comprehensive training programs and develop skills for a successful career in ICT.
-            </p>
-            <button className="inline-block rounded-lg bg-primary px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-lg active:scale-95">
-              Explore Programs
-            </button>
-          </div>
-        </section>
+ 
       </main>
       <Footer />
       <BackToTop />
