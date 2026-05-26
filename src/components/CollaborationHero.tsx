@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-export default function NewsMediaHero() {
+export default function CollaborationHero() {
   return (
     <section className="relative overflow-hidden">
       <div className="relative h-80 w-full overflow-hidden sm:h-96 lg:h-[450px]">
@@ -13,9 +13,9 @@ export default function NewsMediaHero() {
 
       <div className="absolute inset-0 flex items-end p-6 sm:p-10 lg:p-12">
         <div className="max-w-3xl">
-          <h2 className="text-white/80 mb-3 text-sm font-semibold uppercase tracking-wider">Latest Updates</h2>
-          <h1 className="mb-3 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">News & Media Coverage</h1>
-          <p className="text-lg text-white/90">Stay informed with announcements, press features, and media highlights from ICT Foundation Nepal.</p>
+          <h2 className="text-white/80 mb-3 text-sm font-semibold uppercase tracking-wider">Partnerships & Collaboration</h2>
+          <h1 className="mb-3 text-3xl font-bold text-white sm:text-4xl lg:text-5xl">Our Partners & Collaborators</h1>
+          <p className="text-lg text-white/90">Join us in driving digital transformation across Nepal through strategic partnerships and collaboration.</p>
         </div>
       </div>
     </section>

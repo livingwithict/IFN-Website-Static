@@ -118,9 +118,9 @@ export default function UpcomingEventsSection() {
             opacity: { duration: 0.5 },
           }}
         >
-          <div className="grid gap-8 md:gap-10 items-center md:grid-cols-5">
+          <div className="mb-4 grid gap-8 md:gap-10 items-center md:grid-cols-5">
             {/* Logo Placeholder */}
-            <div className={`relative h-64 md:h-auto md:col-span-2 rounded-2xl overflow-hidden bg-gradient-to-br aspect-[3/2] flex items-center justify-center shadow-lg p-8 border-0 border-gray/40`}>
+            <div className={`relative h-64 md:h-auto md:col-span-2 rounded-2xl overflow-hidden bg-white aspect-[3/2] flex items-center justify-center shadow-md p-8 border border-gray-100`}>
               <div className="text-center">
                 <img src={currentEvent.thumbnail} alt={currentEvent.title} className="mx-auto h-full w-full object-cover" />
               </div>

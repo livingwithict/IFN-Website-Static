@@ -27,7 +27,7 @@ export const patrons: Patron[] = [
     name: 'Prof. Dr. Subarna Shakya',
     role: '',
     bio: '',
-    photo: '/images/patrons/member image.jpg',
+    photo: '/images/patrons/Subarna Shakya.jpg',
   },
   {
     id: 'patron-3',

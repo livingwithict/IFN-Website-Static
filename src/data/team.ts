@@ -76,9 +76,9 @@ export const teamMembers: TeamMember[] = [
     role: 'Projects & Events',
     bio: '',
     photo: '/images/team/Sujal Bhakta Shrestha.jpg',
-    facebook: 'https://facebook.com/',
-    instagram: 'https://instagram.com/',
-    linkedin: 'https://linkedin.com/',
+    facebook: 'https://www.facebook.com/sujal.bhaktashrestha/',
+    instagram: 'https://www.instagram.com/sujalbhaktashrestha/',
+    linkedin: 'https://www.linkedin.com/in/sujalbhaktashrestha/',
   },
   {
     id: 'krishpana',

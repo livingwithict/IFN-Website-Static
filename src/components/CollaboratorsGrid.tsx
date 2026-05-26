@@ -1,6 +1,7 @@
 'use client';
 // components/CollaboratorsGrid.tsx
-import React from 'react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 import { Collaborator } from '@/data/collaborators';
 
 interface CollaboratorsGridProps {
@@ -9,39 +10,55 @@ interface CollaboratorsGridProps {
 }
 
 export default function CollaboratorsGrid({ collaborators, title }: CollaboratorsGridProps) {
-  const fallbackImage = 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=300&q=80';
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
+
+  const handleImageError = (id: string) => {
+    setImageErrors(prev => new Set([...prev, id]));
+  };
 
   return (
     <div className="mb-12">
       {title && (
-        <h3 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
+        <h3 className="mb-8 text-2xl font-semibold text-body-text">
           {title}
         </h3>
       )}
-      
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+
+      <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
         {collaborators.map((collaborator) => (
           <a
             key={collaborator.id}
             href={collaborator.website || '#'}
             target={collaborator.website ? '_blank' : undefined}
             rel={collaborator.website ? 'noopener noreferrer' : undefined}
-            className="group flex flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 sm:p-8"
+            className="card-hover group flex flex-col items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm p-6"
           >
-            {/* Logo Container */}
-            <div className="relative h-24 w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 sm:h-32">
-              <img
-                src={collaborator.logo || fallbackImage}
-                alt={collaborator.name}
-                className="h-full w-full object-contain p-4 transition-transform duration-300 group-hover:scale-110"
-                onError={(e) => {
-                  e.currentTarget.src = fallbackImage;
-                }}
-              />
+            {/* Logo Container - Fixed aspect ratio for consistency */}
+            <div className="aspect-square w-full flex items-center justify-center mb-4 bg-white rounded-lg border border-gray-100">
+              {!imageErrors.has(collaborator.id) ? (
+                <div className="relative w-48 h-48 flex items-center justify-center p-4">
+                  <Image
+                    src={collaborator.logo}
+                    alt={collaborator.name}
+                    fill
+                    className="object-contain"
+                    onError={() => handleImageError(collaborator.id)}
+                  />
+                </div>
+              ) : (
+                <div className="h-16 w-16 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center text-xs font-bold text-primary text-center">
+                  {collaborator.name
+                    .split(' ')
+                    .map(word => word[0])
+                    .join('')
+                    .toUpperCase()
+                    .slice(0, 2)}
+                </div>
+              )}
             </div>
 
-            {/* Name */}
-            <p className="mt-4 line-clamp-2 text-center text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+            {/* Organization Name */}
+            <p className="text-center text-sm font-semibold text-body-text line-clamp-2 group-hover:text-primary transition-colors">
               {collaborator.name}
             </p>
           </a>

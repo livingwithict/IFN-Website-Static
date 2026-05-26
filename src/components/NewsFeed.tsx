@@ -1,6 +1,22 @@
-// components/NewsFeed.tsx
-import NewsCard from './NewsCard';
 import { NewsArticle } from '@/data/types';
+
+function NewsCard({ article }: { article: NewsArticle }) {
+  return (
+    <article className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
+      <a href={article.url} target="_blank" rel="noreferrer" className="block">
+        {article.thumbnail ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={article.thumbnail} alt={article.title} className="h-48 w-full object-cover" />
+        ) : null}
+        <div className="p-5">
+          <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">{article.source}</p>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{article.title}</h3>
+          <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">{article.date}</p>
+        </div>
+      </a>
+    </article>
+  );
+}
 
 async function getAutomatedNews(): Promise<NewsArticle[]> {
   try {

@@ -9,28 +9,28 @@ const reports = [
     description: 'Provincial digital capability mapping across all seven provinces',
     color: 'from-blue-600 to-indigo-700',
     image: '/images/publications/Budget-Recomendation.png',
-    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view', 
+    link: '', 
   },
   {
     title: 'eGovernance Assessment & Stocktaking Study',
     description: "Findings and recommendations from Nepal's largest digital conference",
     color: 'from-primary to-primary-dark',
     image: '/images/publications/eGovernace.jpg',
-    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
+    link: '',
   },
   {
     title: 'Digital Paridisya 1.0',
     description: "Strategic framework report for Nepal's digital transformation",
     color: 'from-teal-600 to-cyan-700',
     image: '/images/publications/Digital-Paridisya-1.jpeg',
-    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
+    link: '',
   },
   {
     title: 'Digital Nepal Conclave 2024',
     description: "Strategic framework report for Nepal's digital transformation",
     color: 'from-teal-600 to-cyan-700',
     image: '/images/publications/DNC-24-report.jpeg',
-    link: 'https://drive.google.com/file/d/YOUR_FILE_ID/view',
+    link: '',
   },
 ];
 

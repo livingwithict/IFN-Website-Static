@@ -1,46 +1,36 @@
-// Manual news articles and media entries
-export interface ManualNewsArticle {
+// Simplified media entries - only require URL
+export interface MediaItem {
   id: string;
-  title: string;
-  date: string; // ISO format or readable format
-  thumbnail: string;
-  publisher: string;
   url: string;
+  type: 'news' | 'youtube';
 }
 
-export interface YouTubeVideo {
-  id: string;
-  title: string;
-  videoId: string; // YouTube video ID
-  thumbnail: string;
-  date: string;
-}
-
-// Manual news articles - Add your news links here
-export const manualNewsArticles: ManualNewsArticle[] = [
+// All media items - news and YouTube
+export const allMediaItems: MediaItem[] = [
+  // News articles
   {
     id: 'news-001',
-    title: 'ICT Foundation Nepal Makes Headlines in Tech Industry',
-    date: '2026-04-25',
-    thumbnail: 'https://images.unsplash.com/photo-1460925895917-adf4e9a5160f?auto=format&fit=crop&w=1200&q=80',
-    publisher: 'Technology Khabar',
     url: 'https://www.technologykhabar.com/2026/04/25/237755/',
+    type: 'news',
   },
-  // Add more news articles here following the same structure
-  // Note: You can omit the thumbnail field for news articles now, they'll display text-only
-];
+  {
+    id: 'news-002',
+    url: 'https://www.sharesansar.com/newsdetail/iedi-selects-ict-foundation-nepal-to-run-startup-incubation-program-for-50-startups-2026-04-20',
+    type: 'news',
+  },
+  // Add more news URLs here
 
-// YouTube videos - Add your YouTube video links here
-export const youtubeVideos: YouTubeVideo[] = [
+  // YouTube videos
   {
     id: 'video-001',
-    title: 'ICT Foundation Nepal - 2026 Digital Initiative',
-    videoId: 'P_zx9TtKRvE',
-    thumbnail: 'https://img.youtube.com/vi/P_zx9TtKRvE/maxresdefault.jpg',
-    date: '2026-04-20',
+    url: 'https://www.youtube.com/watch?v=P_zx9TtKRvE',
+    type: 'youtube',
   },
-  // Add more YouTube videos here following the same structure
+  // Add more YouTube URLs here
 ];
+
+export const newsItems = allMediaItems.filter(item => item.type === 'news');
+export const youtubeItems = allMediaItems.filter(item => item.type === 'youtube');
 
 // Helper function to extract YouTube video ID from URL
 export function extractYouTubeId(url: string): string {

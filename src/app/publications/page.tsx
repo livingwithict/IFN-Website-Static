@@ -11,7 +11,7 @@ const publications = [
     // category: 'Policy Reports',
     // year: 2024,
     image: '/images/publications/Event-Pre-Budget.png',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-blue-600 to-indigo-700',
   },
   {
@@ -20,7 +20,7 @@ const publications = [
     // category: 'Research Studies',
     // year: 2023,
     image: '/images/publications/placeholder.jpg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-purple-600 to-pink-700',
   },
   {
@@ -29,7 +29,7 @@ const publications = [
     // category: 'Provincial Reports',
     // year: 2023,
     image: '/images/publications/placeholder.jpg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-teal-600 to-cyan-700',
   },
   {
@@ -38,7 +38,7 @@ const publications = [
     // category: 'Conference Reports',
     // year: 2024,
     image: '/images/publications/placeholder.jpg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-red-600 to-orange-700',
   },
   {
@@ -47,7 +47,7 @@ const publications = [
     // category: 'Conference Reports',
     // year: 2023,
     image: '/images/publications/placeholder.jpg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-green-600 to-emerald-700',
   },
   {
@@ -56,7 +56,7 @@ const publications = [
     // category: 'Conference Reports',
     // year: 2022,
     image: '/images/publications/DNC-24-report.jpeg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-indigo-600 to-blue-700',
   },
   {
@@ -65,7 +65,7 @@ const publications = [
     // category: 'Industry Analysis',
     // year: 2023,
     image: '/images/publications/DNC-23-report.jpeg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-amber-600 to-orange-700',
   },
   {
@@ -74,7 +74,7 @@ const publications = [
     // category: 'Impact Reports',
     // year: 2024,
     image: '/images/publications/DNC-22-report.jpeg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-cyan-600 to-blue-700',
   },
 ];
@@ -86,7 +86,7 @@ const governmentResearch = [
     // category: 'Government Studies',
     // year: 2023,
     image: '/images/publications/Budget-Recomendation.png',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-slate-600 to-gray-700',
   },
   {
@@ -95,7 +95,7 @@ const governmentResearch = [
     // category: 'Government Studies',
     // year: 2023,
     image: '/images/publications/eGovernace.jpg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-orange-600 to-yellow-700',
   },
   {
@@ -104,7 +104,7 @@ const governmentResearch = [
     // category: 'Government Studies',
     // year: 2023,
     image: '/images/publications/placeholder.jpg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-slate-600 to-gray-700',
   },
   {
@@ -113,7 +113,7 @@ const governmentResearch = [
     // category: 'Government Studies',
     // year: 2023,
     image: '/images/publications/Digital-Paridisya-1.jpeg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-orange-600 to-yellow-700',
   },
   {
@@ -122,7 +122,7 @@ const governmentResearch = [
     // category: 'Government Studies',
     // year: 2023,
     image: '/images/publications/Digital-Paridisya-2.jpeg',
-    href: 'https://drive.google.com/file/d/YOUR-FILE-ID/view',
+    href: 'https://drive.google.com/',
     color: 'from-slate-600 to-gray-700',
   },
 ];
@@ -138,9 +138,9 @@ export default function PublicationsPage() {
   return (
     <>
       <Header />
-      <main>
+      <main className="pt-14">
         {/* Hero Section */}
-        <section className="py-10 md:py-16">
+        <section className="py-4 md:py-16">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto mb-4 section-divider" />
             <h1 className="mb-4 text-center text-3xl font-bold text-primary md:text-[32px]">
@@ -155,7 +155,7 @@ export default function PublicationsPage() {
         </section>
 
         {/* Publications Grid */}
-        <section className="py-10">
+        <section className="py-0">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12">
               <h2 className="mb-8 text-2xl font-semibold text-body-text">
@@ -223,7 +223,7 @@ export default function PublicationsPage() {
         </section>
 
         {/* Government Research Section */}
-        <section className="py-10 md:py-16">
+        <section className="py-4 md:py-8">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="mb-8 text-2xl font-semibold text-body-text">Government Research</h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

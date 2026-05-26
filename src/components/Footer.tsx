@@ -14,7 +14,7 @@ const quickLinks = [
   { label: 'About Us', href: '/about-ifn' },
   { label: 'Programs & Initiatives', href: '/#initiatives' },
   { label: 'Publications', href: '/publications' },
-  { label: 'Collaborators', href: '/#collaborators' },
+  { label: 'Collaborators', href: '/collaboration' },
   { label: 'Contact', href: '/#contact' },
 ];
 

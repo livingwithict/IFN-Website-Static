@@ -1,30 +1,33 @@
 import React from 'react';
-import ManualNewsSection from '@/components/ManualNewsSection';
-import MediaSection from '@/components/MediaSection';
+import Header from '@/components/HeaderDark';
+import Footer from '@/components/Footer';
+import BackToTop from '@/components/BackToTop';
 import NewsMediaHero from '@/components/NewsMediaHero';
-import { manualNewsArticles, youtubeVideos } from '@/data/media';
+import UnifiedMediaSection from '@/components/UnifiedMediaSection';
 
-export default async function NewsAndMediaPage() {
-  const latestNews = manualNewsArticles.length > 0 ? manualNewsArticles[0] : null;
-  const latestVideo = youtubeVideos.length > 0 ? youtubeVideos[0] : null;
-
+export default function NewsAndMediaPage() {
   return (
-    <main>
-      {/* Hero Section */}
-      <NewsMediaHero latestNews={latestNews} latestVideo={latestVideo} />
+    <>
+      <Header />
+      <main className="pt-14">
+        {/* <NewsMediaHero /> */}
 
-      <div className="mx-auto max-w-7xl px-6 py-16">
+        <section className="py-4 md:py-16">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mx-auto mb-4 section-divider" />
+            <h1 className="mb-4 text-center text-3xl font-bold text-primary md:text-[32px]">
+              News & Media
+            </h1>
+            <p className="mx-auto max-w-3xl text-center text-body-text/60">
+              Stay updated with the latest announcements, press coverage, and media highlights from ICT Foundation Nepal.
+            </p>
+          </div>
+        </section>
 
-        {/* Manual News Coverage Section */}
-        {manualNewsArticles.length > 0 && (
-          <ManualNewsSection articles={manualNewsArticles} />
-        )}
-
-        {/* Video Media Section */}
-        {youtubeVideos.length > 0 && (
-          <MediaSection videos={youtubeVideos} />
-        )}
-      </div>
-    </main>
+        <UnifiedMediaSection />
+      </main>
+      <Footer />
+      <BackToTop />
+    </>
   );
 }
