@@ -62,8 +62,8 @@ const objectives = [
 
 export default function AboutSection() {
   return (
-    <AnimatedSection id="about">
-      <div className="py-10 md:py-6 mx-auto max-w-7xl px-6">
+    <AnimatedSection id="about" className="pt-6 md:pt-6">
+      <div className="py-2 md:py-6 mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-4 section-divider" />
       <h2 className="mb-8 text-center text-3xl font-bold text-primary md:text-[32px]">
         About Us

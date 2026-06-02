@@ -64,16 +64,9 @@ const navLinks: NavLink[] = [
 ];
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -91,29 +84,16 @@ export default function Header() {
     dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 150);
   };
 
-  const textColor = scrolled ? "text-[#0E2557]" : "text-white";
-
   return (
-    <header
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-[0_2px_10px_rgba(0,0,0,0.08)]" : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 right-0 left-0 z-50 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.08)]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="relative flex h-15 w-auto max-w-[160px] items-center">
-          <Image
-            src="/images/logo-white.png"
-            alt="ICT Foundation Nepal"
-            width={160}
-            height={60}
-            className={`absolute inset-0 h-full w-auto transition-opacity duration-300 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
-          />
           <Image
             src="/images/logo.png"
             alt="ICT Foundation Nepal"
             width={160}
             height={60}
-            className={`absolute inset-0 h-full w-auto transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0'}`}
+            className="h-full w-auto"
           />
           <span className="invisible">ICT Foundation Nepal</span>
         </Link>
@@ -129,7 +109,7 @@ export default function Header() {
             >
               <Link
                 href={link.href}
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${textColor}`}
+                className="flex items-center gap-1 text-sm font-medium text-[#0E2557] transition-colors hover:text-primary"
               >
                 {link.label}
                 {link.children && (
@@ -180,7 +160,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className={`relative z-50 flex h-10 w-10 items-center justify-center lg:hidden ${textColor}`}
+          className="relative z-50 flex h-10 w-10 items-center justify-center text-[#0E2557] lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >

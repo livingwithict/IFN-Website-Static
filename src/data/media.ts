@@ -9,17 +9,52 @@ export interface MediaItem {
 export const allMediaItems: MediaItem[] = [
   // News articles
   {
-    id: 'news-001',
-    url: 'https://www.technologykhabar.com/2026/04/25/237755/',
+    id: 'news-002',
+    url: 'https://english.insurancekhabar.com/ict-foundation-nepal-opens-500-full-scholarships-for-google-career-certificate-2/',
     type: 'news',
   },
   {
-    id: 'news-002',
+    id: 'news-003',
     url: 'https://www.sharesansar.com/newsdetail/iedi-selects-ict-foundation-nepal-to-run-startup-incubation-program-for-50-startups-2026-04-20',
     type: 'news',
   },
-  // Add more news URLs here
+  {
+    id: 'news-004',
+    url: 'https://www.sharesansar.com/newsdetail/ict-gyan-reaches-all-seven-provinces-to-bridge-nepals-digital-divide-2025-06-18',
+    type: 'news',
+  },
+  {
+    id: 'news-005',
+    url: 'https://ictsamachar.com/news/pre-budget-ict-discourse-2083--emphasis-on-policy/',
+    type: 'news',
+  },
+  {
+    id: 'news-006',
+    url: 'https://english.hamropatro.com/news/details/8521098159029999?ns=',
+    type: 'news',
+  },
+  {
+    id: 'news-007',
+    url: 'https://ictsamachar.com/news/government-private-sector-on-one-platform--ict-discourse/',
+    type: 'news',
+  },
+  {
+    id: 'news-008',
+    url: 'https://ictsamachar.com/news/14-startups-from-bagmati-province-selected-for/',
+    type: 'news',
+  },
+  {
+    id: 'news-009',
+    url: 'https://ictsamachar.com/news/13-startups-from-koshi-region-selected-for/',
+    type: 'news',
+  },
+  {
+    id: 'news-010',
+    url: 'https://www.b360nepal.com/detail/25970/digital-nepal-conclave-2025',
+    type: 'news',
+  },
 
+  
   // YouTube videos
   {
     id: 'video-001',

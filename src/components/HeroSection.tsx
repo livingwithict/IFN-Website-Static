@@ -1,18 +1,24 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   FaUsers,
   FaRocket,
   FaHandshake,
   FaLandmark,
+  FaCity,
+  FaTasks,
+  FaMapMarkerAlt,
+  FaAward,
 } from 'react-icons/fa';
 import AnimatedSection from './AnimatedSection';
 import SlideshowHero from './SlideshowHero';
+import { LuBookOpenCheck, LuMap } from 'react-icons/lu';
 
 const stats = [
-  { value: '2500+', label: 'Annual Participants', icon: FaUsers },
-  { value: '400+', label: 'Startups Supported', icon: FaRocket },
-  { value: '200+', label: 'Local Entrepreneurs', icon: FaHandshake },
-  { value: '500+', label: 'Government Officials', icon: FaLandmark },
+  { value: '10+', label: 'Programs Successfully Conducted', icon: FaTasks },
+  { value: '7', label: 'Provinces Actively Covered', icon: FaMapMarkerAlt },
+  { value: '15+', label: 'Municipalities (Palikas) Reached', icon: FaCity },
+  { value: '3+', label: 'Research Studies Completed', icon: LuBookOpenCheck },
 ];
 
 const initiatives = [
@@ -38,11 +44,6 @@ const slides = [
     alt: '',
   },
   {
-    id: 'hero-2',
-    src: '/images/hero/hero-2.jpg',
-    alt: '',
-  },
-  {
     id: 'hero-3',
     src: '/images/hero/hero-3.jpg',
     alt: '',
@@ -55,6 +56,11 @@ const slides = [
   {
     id: 'hero-5',
     src: '/images/hero/hero-5.jpg',
+    alt: '',
+  },
+  {
+    id: 'hero-2',
+    src: '/images/hero/hero-2.jpg',
     alt: '',
   },
 ];
@@ -98,6 +104,42 @@ export default function HeroSection() {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      {/* Achievement Highlight Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 py-12 md:py-16">
+        <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-amber-200/20 blur-3xl" aria-hidden="true" />
+        <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-orange-200/20 blur-3xl" aria-hidden="true" />
+
+        <div className="relative mx-auto max-w-5xl px-6">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+            {/* WSIS Logo Placeholder */}
+            <div className="flex-shrink-0">
+              <div className="relative h-32 w-32 md:h-40 md:w-40">
+                <Image
+                  src="/images/wsis.png"
+                  alt="World Summit on the Information Society"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex-1">
+              <div className="mb-4 flex flex-col items-center gap-3 md:flex-row md:items-baseline">
+                <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-200 px-3 py-1.5 text-lg font-bold uppercase tracking-wider text-amber-800">
+                  <FaAward className="h-5 w-5" />
+                  Global Nominee - WSIS Prizes
+                </div>
+              </div>
+              <p className="text-center text-base leading-relaxed text-body-text md:text-left md:text-lg">
+                ICT Foundation Nepal is among the <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">Top 360 global nominees</span> selected from over 1,500 entries for the prestigious <span className="font-extrabold text-amber-900">World Summit on the Information Society (WSIS) Prizes</span> under Category AL C1 for promoting ICTs for development.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

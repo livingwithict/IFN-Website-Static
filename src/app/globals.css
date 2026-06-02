@@ -20,6 +20,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 80px;
+}
+
 body {
   color: var(--color-body-text);
   font-family: var(--font-sans);
@@ -59,10 +63,10 @@ body {
 
 /* Section divider */
 .section-divider {
-  width: 60px;
+  width: 100px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #E33831, #0C4CA4);
+  background: linear-gradient(90deg, #ed1c24, #0c4da2);
 }
 
 /* Card hover lift */

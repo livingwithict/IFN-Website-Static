@@ -14,7 +14,7 @@ export default function MediaSection() {
         <section className="py-4">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="mb-8 text-2xl font-semibold text-body-text">Latest News Coverage</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {newsItems.map(item => (
                 <MediaCard key={item.id} item={item} />
               ))}
@@ -28,7 +28,7 @@ export default function MediaSection() {
         <section className="py-4">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="mb-8 text-2xl font-semibold text-body-text">Video Media</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {youtubeItems.map(item => (
                 <MediaCard key={item.id} item={item} />
               ))}

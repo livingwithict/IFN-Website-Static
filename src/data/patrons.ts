@@ -41,7 +41,7 @@ export const patrons: Patron[] = [
     name: 'Mr. Birendra Kumar Mishra',
     role: 'Former Joint Secretary, MoCIT, GoN',
     bio: '',
-    photo: '/images/patrons/member image.jpg',
+    photo: '/images/patrons/Birendra Mishra.jpg',
   },
   {
     id: 'patron-5',

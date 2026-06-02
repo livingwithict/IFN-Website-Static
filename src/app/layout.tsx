@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Roboto_Slab, Chivo } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -39,7 +40,10 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${robotoSlab.variable} ${chivo.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans" suppressHydrationWarning>{children}</body>
+      <body className="flex min-h-full flex-col pt-[80px] font-sans" suppressHydrationWarning>
+        <ScrollToTop />
+        {children}
+      </body>
     </html>
   );
 }

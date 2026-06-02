@@ -1,8 +1,8 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
+import EventPageHero from '@/components/EventPageHero';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 
 export const metadata = {
@@ -15,39 +15,13 @@ export default function DigitalMadheshConclave() {
     <>
       <Header />
       <main>
-        {/* Hero */}
-        <section className="relative min-h-[65vh] flex items-center justify-center bg-gray-900 text-white">
-          <div className="absolute inset-0">
-            <Image
-              src="/images/events/DMC.jpg"
-              alt="Digital Madhesh Conclave event"
-              fill
-              style={{ objectFit: 'cover' }}
-              priority
-            />
-            <div className="absolute inset-0 bg-black/80" />
-          </div>
-
-          <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-            <div className="flex flex-col items-center gap-6">
-              <h1 className="text-4xl font-bold leading-tight lg:text-5xl">
-                Digital Madhesh Conclave
-              </h1>
-              <p className="max-w-3xl text-lg text-gray-200">
-                Dedicated to digital innovation and economic development in the Madhesh region. Promoting entrepreneurship and inclusive growth through technology-driven solutions.
-              </p>
-
-              <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-                <a
-                  href="#"
-                  className="rounded-md bg-primary px-6 py-3 font-semibold text-white hover:opacity-95"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <EventPageHero
+          title="Digital Madhesh Conclave"
+          description="Dedicated to digital innovation and economic development in the Madhesh region. Promoting entrepreneurship and inclusive growth through technology-driven solutions."
+          imageSrc="/images/events/DMC.jpg"
+          buttonText="Learn More"
+          buttonLink="#"
+        />
 
         {/* Overview Section */}
         <section className="py-16 lg:py-24 bg-gray-50">

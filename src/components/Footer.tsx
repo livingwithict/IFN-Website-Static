@@ -3,11 +3,11 @@ import Fa from 'zod/v4/locales/fa.js';
 import Image from 'next/image';
 
 const initiativeLinks = [
-  { label: 'Digital Nepal Conclave', url: '/digital-nepal-conclave' },
-  { label: 'Digital Samvad', url: 'https://digitalsamvad.org' },
-  { label: 'Startup & Idea Fest', url: 'https://startupnepal.org' },
-  { label: 'Digital Karnali Conclave', url: 'https://digitalkarnali.org' },
-  { label: 'Digital Madhesh Conclave', url: 'https://madhesh.digital' },
+  { label: 'Digital Samvad', url: '/digital-samvad' },
+  { label: 'ICT Gyan', url: '/ict-gyan' },
+  { label: 'Startup & Ideafest', url: '/ideafest' },
+  { label: 'Business Incubation Service', url: '/incubation' },
+  { label: 'Google Career Certification', url: '/google-career-certificates' },    
 ];
 
 const quickLinks = [

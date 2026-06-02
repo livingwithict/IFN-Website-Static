@@ -17,7 +17,7 @@ export default function MediaCard({ item }: MediaCardProps) {
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="card-hover group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm"
+        className="card-hover group flex flex-col overflow-hidden bg-white shadow-sm"
       >
         <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
           {isLoading && (
@@ -48,7 +48,7 @@ export default function MediaCard({ item }: MediaCardProps) {
         </div>
 
         <div className="flex flex-1 flex-col p-5">
-          <h3 className="line-clamp-2 text-lg font-semibold text-body-text">
+          <h3 className="line-clamp-2 text-base font-semibold text-body-text">
             {title}
           </h3>
           <a
@@ -73,7 +73,7 @@ export default function MediaCard({ item }: MediaCardProps) {
       href={item.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="card-hover group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm"
+      className="card-hover group flex flex-col overflow-hidden bg-white shadow-sm"
     >
       <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
         {isLoading && (
@@ -89,7 +89,7 @@ export default function MediaCard({ item }: MediaCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="line-clamp-2 text-lg font-semibold text-body-text">
+        <h3 className="line-clamp-2 text-base font-semibold text-body-text">
           {title}
         </h3>
         <div className="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-semibold text-primary">

@@ -103,12 +103,12 @@ const governmentResearch = [
     // description: 'Conducted on behalf of the Department of Information Technology (DoIT), Government of Nepal; compiled industry data, assessed current status, identified SWOT factors, and provided policy and investment recommendations.',
     // category: 'Government Studies',
     // year: 2023,
-    image: '/images/publications/placeholder.jpg',
+    image: '/images/publications/inventory.jpg',
     href: 'https://drive.google.com/',
     color: 'from-slate-600 to-gray-700',
   },
   {
-    title: 'Digital Nepal Paridishya Vol 1',
+    title: 'Digital Nepal Paridrishya Vol 1',
     // description: 'Created a detailed inventory of ICT systems, software, and digital infrastructure; findings informed evidence-based policy formulation and strategic planning to improve Nepal\'s e-governance landscape.',
     // category: 'Government Studies',
     // year: 2023,
@@ -117,7 +117,7 @@ const governmentResearch = [
     color: 'from-orange-600 to-yellow-700',
   },
   {
-    title: 'Digital Nepal Paridishya Vol 2',
+    title: 'Digital Nepal Paridrishya Vol 2',
     // description: 'Conducted on behalf of the Department of Information Technology (DoIT), Government of Nepal; compiled industry data, assessed current status, identified SWOT factors, and provided policy and investment recommendations.',
     // category: 'Government Studies',
     // year: 2023,
@@ -138,9 +138,9 @@ export default function PublicationsPage() {
   return (
     <>
       <Header />
-      <main className="pt-14">
+      <main className="pt-6">
         {/* Hero Section */}
-        <section className="py-4 md:py-16">
+        <section className="py-4 md:py-6">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto mb-4 section-divider" />
             <h1 className="mb-4 text-center text-3xl font-bold text-primary md:text-[32px]">

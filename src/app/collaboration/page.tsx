@@ -10,11 +10,11 @@ export default function CollaborationPage() {
   return (
     <>
       <Header />
-      <main className="pt-14">
+      <main className="pt-6">
         {/* <CollaborationHero /> */}
 
         {/* About Collaboration Section */}
-        <section className="py-4 md:py-16">
+        <section className="py-4 md:py-6">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-12">
               <div className="mx-auto mb-4 section-divider" />

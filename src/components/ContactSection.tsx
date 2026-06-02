@@ -83,7 +83,8 @@ export default function ContactSection() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#contact-form"
-              className="inline-flex items-center gap-2 rounded-lg gradient-accent px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-red-500/25 transition-all hover:shadow-xl hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-lg px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:brightness-110"
+              style={{ backgroundColor: '#ed1c24', boxShadow: '0 10px 15px -3px rgba(237, 28, 36, 0.25)' }}
             >
               Contact Us
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -183,7 +184,8 @@ export default function ContactSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center gap-2 rounded-xl gradient-accent px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-red-500/20 transition-all hover:shadow-xl hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+              className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+              style={{ backgroundColor: '#ed1c24', boxShadow: '0 10px 15px -3px rgba(237, 28, 36, 0.2)' }}
             >
               {isSubmitting ? (
                 <>

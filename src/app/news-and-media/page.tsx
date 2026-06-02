@@ -9,10 +9,10 @@ export default function NewsAndMediaPage() {
   return (
     <>
       <Header />
-      <main className="pt-14">
+      <main className="pt-6">
         {/* <NewsMediaHero /> */}
 
-        <section className="py-4 md:py-16">
+        <section className="py-4 md:py-6">
           <div className="mx-auto max-w-7xl px-6">
             <div className="mx-auto mb-4 section-divider" />
             <h1 className="mb-4 text-center text-3xl font-bold text-primary md:text-[32px]">

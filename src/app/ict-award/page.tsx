@@ -1,5 +1,5 @@
+import EventPageHero from '@/components/EventPageHero';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata = {
   title: 'ICT Award | ICT Foundation Nepal',
@@ -9,39 +9,13 @@ export const metadata = {
 export default function IctAward() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[65vh] flex items-center justify-center bg-gray-900 text-white">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/events/ICTAward.jpg"
-            alt="ICT Award"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
-          />
-          <div className="absolute inset-0 bg-black/80" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-            <div className="flex flex-col items-center gap-6">
-            <h1 className="text-4xl font-bold leading-tight lg:text-5xl">
-              ICT Award
-            </h1>
-            <p className="max-w-3xl text-lg text-gray-200">
-              Recognition program celebrating excellence in ICT innovation, implementation, and digital transformation in Nepal. Honoring innovators, entrepreneurs, organizations, and projects that demonstrate outstanding contributions to Nepal's digital future.
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-              <a
-                href="https://ictaward.org"
-                className="rounded-md bg-primary px-6 py-3 font-semibold text-white hover:opacity-95"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <EventPageHero
+        title="ICT Award"
+        description="Recognition program celebrating excellence in ICT innovation, implementation, and digital transformation in Nepal. Honoring innovators, entrepreneurs, organizations, and projects that demonstrate outstanding contributions to Nepal's digital future."
+        imageSrc="/images/events/ICTAward.jpg"
+        buttonText="Learn More"
+        buttonLink="https://ictaward.org"
+      />
 
       {/* Overview Section */}
       <section id="overview" className="py-16 lg:py-24 bg-gray-50">

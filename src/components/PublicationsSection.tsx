@@ -5,13 +5,6 @@ import AnimatedSection from './AnimatedSection';
 
 const reports = [
   {
-    title: 'Budget Recommendations for Nepal’s Digital Future',
-    description: 'Provincial digital capability mapping across all seven provinces',
-    color: 'from-blue-600 to-indigo-700',
-    image: '/images/publications/Budget-Recomendation.jpg',
-    link: '', 
-  },
-  {
     title: 'eGovernance Assessment & Stocktaking Study',
     description: "Findings and recommendations from Nepal's largest digital conference",
     color: 'from-primary to-primary-dark',
@@ -19,27 +12,34 @@ const reports = [
     link: '',
   },
   {
-    title: 'Digital Paridisya 1.0',
+    title: 'Inventory of ICT Industry in Nepal',
+    description: 'Comprehensive inventory of the ICT industry in Nepal',
+    color: 'from-blue-600 to-indigo-700',
+    image: '/images/publications/inventory.jpg',
+    link: '', 
+  },
+  {
+    title: 'Digital Paridrisya 1.0',
     description: "Strategic framework report for Nepal's digital transformation",
     color: 'from-teal-600 to-cyan-700',
     image: '/images/publications/Digital-Paridisya-1.jpg',
     link: '',
   },
   {
-    title: 'Digital Nepal Conclave 2024',
+    title: 'Digital Paridrisya 2.0',
     description: "Strategic framework report for Nepal's digital transformation",
     color: 'from-teal-600 to-cyan-700',
-    image: '/images/publications/DNC-24-report.jpg',
+    image: '/images/publications/Digital-Paridisya-2.jpg',
     link: '',
   },
 ];
 
 export default function PublicationsSection() {
   return (
-    <AnimatedSection id="publications">
+    <AnimatedSection id="publications" className="bg-surface">
       <div className="mx-auto mb-4 section-divider" />
       <h2 className="mb-4 text-center text-3xl font-bold text-primary md:text-[32px]">
-        Research & Publications
+        Research Publications
       </h2>
       <p className="mx-auto mb-12 max-w-3xl text-center text-body-text/60">
         IFN&apos;s research and publication work informs policy decisions at every level
@@ -48,7 +48,7 @@ export default function PublicationsSection() {
       </p>
 
       {/* Reports & Publications */}
-      <div className="mb-16">
+      <div className="mb-4">
         {/* <h3 className="mb-8 text-2xl font-semibold text-body-text">Reports & Publications</h3> */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {reports.map((report) => (
