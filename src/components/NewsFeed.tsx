@@ -1,5 +1,9 @@
+'use client'; // 1. Tell Next.js this runs in the browser
+
+import { useState, useEffect } from 'react';
 import { NewsArticle } from '@/data/types';
 
+// The NewsCard component remains exactly the same
 function NewsCard({ article }: { article: NewsArticle }) {
   return (
     <article className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
@@ -18,37 +22,53 @@ function NewsCard({ article }: { article: NewsArticle }) {
   );
 }
 
-async function getAutomatedNews(): Promise<NewsArticle[]> {
-  try {
-    // Fetching live tech headlines automatically (No key required for this testing mirror)
-    const res = await fetch(
-      'https://saurav.tech/NewsAPI/top-headlines/category/technology/us.json',
-      { next: { revalidate: 3600 } } 
+// 2. Remove 'async' from the main component
+export default function NewsFeed({ initialArticles }: { initialArticles?: NewsArticle[] } = {}) {
+  const [articles, setArticles] = useState<NewsArticle[]>(initialArticles || []);
+  const [isLoading, setIsLoading] = useState(!initialArticles);
+  const [hasError, setHasError] = useState(false);
+
+  // 3. Fetch data dynamically when the component mounts in the user's browser
+  useEffect(() => {
+    if (initialArticles) return; // Skip fetch if we already have data
+
+    const fetchNews = async () => {
+      try {
+        const res = await fetch('https://saurav.tech/NewsAPI/top-headlines/category/technology/us.json');
+        if (!res.ok) throw new Error('Failed to fetch automated news stream');
+
+        const data = await res.json();
+        
+        const formattedArticles = data.articles.slice(0, 6).map((article: any, index: number) => ({
+          id: `${index}-${article.publishedAt}`,
+          title: article.title,
+          thumbnail: article.urlToImage,
+          source: article.source.name,
+          url: article.url,
+          date: new Date(article.publishedAt).toLocaleDateString(), // Optional: format the date nicely
+        }));
+
+        setArticles(formattedArticles);
+      } catch (error) {
+        console.error("Automation error:", error);
+        setHasError(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, [initialArticles]);
+
+  if (isLoading) {
+    return (
+      <div className="text-center py-12 text-gray-500">
+        Loading latest tech news...
+      </div>
     );
-
-    if (!res.ok) throw new Error('Failed to fetch automated news stream');
-
-    const data = await res.json();
-
-    // Map incoming API parameters smoothly into your layout's structure
-    return data.articles.slice(0, 6).map((article: any, index: number) => ({
-      id: `${index}-${article.publishedAt}`,
-      title: article.title,
-      thumbnail: article.urlToImage,
-      source: article.source.name,
-      url: article.url,
-      date: article.publishedAt, 
-    }));
-  } catch (error) {
-    console.error("Automation error:", error);
-    return []; // Returns an empty state instead of crashing if the API has hiccups
   }
-}
 
-export default async function NewsFeed({ initialArticles }: { initialArticles?: NewsArticle[] } = {}) {
-  const articles = initialArticles ?? (await getAutomatedNews());
-
-  if (articles.length === 0) {
+  if (hasError || articles.length === 0) {
     return (
       <div className="text-center py-12 text-gray-500">
         Unable to load automated feed at this time.

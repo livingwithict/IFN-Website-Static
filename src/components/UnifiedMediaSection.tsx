@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import MediaCard from './MediaCard';
+import YouTubeCard from './youtubecard';
 import { allMediaItems } from '@/data/media';
 
 export default function MediaSection() {
@@ -24,18 +25,18 @@ export default function MediaSection() {
       )}
 
       {/* Video Section */}
-      {youtubeItems.length > 0 && (
+      {/* {youtubeItems.length > 0 && (
         <section className="py-4">
           <div className="mx-auto max-w-7xl px-6">
-            <h2 className="mb-8 text-2xl font-semibold text-body-text">Video Media</h2>
+            <h2 className="mb-8 text-2xl font-semibold text-body-text">Video Library</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {youtubeItems.map(item => (
-                <MediaCard key={item.id} item={item} />
+                <YouTubeCard key={item.id} url={item.url} />
               ))}
             </div>
           </div>
         </section>
-      )}
+      )} */}
     </>
   );
 }

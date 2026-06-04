@@ -7,10 +7,13 @@ interface MetadataCache {
 
 const metadataCache = new Map<string, MetadataCache>();
 
+// Extracted the default image to a constant to keep the code clean
+const DEFAULT_THUMBNAIL = '/public/images/thumbnail.jpg';
+
 export function useMetadata(url: string, defaultTitle: string = 'Article') {
   const [metadata, setMetadata] = useState<MetadataCache>({
     title: defaultTitle,
-    thumbnail: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80',
+    thumbnail: DEFAULT_THUMBNAIL,
   });
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,26 +32,54 @@ export function useMetadata(url: string, defaultTitle: string = 'Article') {
 
     const fetchMetadata = async () => {
       try {
-        const response = await fetch(`/api/extract-thumbnail?url=${encodeURIComponent(url)}`);
-        if (response.ok) {
-          const data = await response.json();
-          const cached: MetadataCache = {
-            title: data.title || defaultTitle,
-            thumbnail: data.thumbnail || 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80',
-          };
-          metadataCache.set(url, cached);
-          setMetadata(cached);
-        } else {
-          setMetadata({
-            title: defaultTitle,
-            thumbnail: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80',
-          });
+        let finalTitle = defaultTitle;
+        let finalThumbnail = DEFAULT_THUMBNAIL;
+
+        // 1. YouTube Fast-Path
+        if (url.includes('youtube.com') || url.includes('youtu.be')) {
+          const ytRegex = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+          const match = url.match(ytRegex);
+          const videoId = match && match[2].length === 11 ? match[2] : null;
+
+          if (videoId) {
+            try {
+              // YouTube oEmbed allows client-side fetching
+              const res = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
+              if (res.ok) {
+                const data = await res.json();
+                finalTitle = data.title || defaultTitle;
+              }
+              // We can construct the high-res thumbnail URL directly from the ID
+              finalThumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            } catch (e) {
+              // Fallback to just the image if oEmbed fails
+              finalThumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            }
+          }
+        } 
+        // 2. General URLs via Microlink API (Bypasses CORS)
+        else {
+          const response = await fetch(`https://api.microlink.io?url=${encodeURIComponent(url)}`);
+          if (response.ok) {
+            const { data } = await response.json();
+            finalTitle = data.title || defaultTitle;
+            finalThumbnail = data.image?.url || data.logo?.url || DEFAULT_THUMBNAIL;
+          }
         }
+
+        const cached: MetadataCache = {
+          title: finalTitle,
+          thumbnail: finalThumbnail,
+        };
+        
+        metadataCache.set(url, cached);
+        setMetadata(cached);
+
       } catch (error) {
         console.error('Error fetching metadata:', error);
         setMetadata({
           title: defaultTitle,
-          thumbnail: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=600&q=80',
+          thumbnail: DEFAULT_THUMBNAIL,
         });
       } finally {
         setIsLoading(false);

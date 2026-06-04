@@ -19,21 +19,21 @@ const ongoingActivities = [
   },
   {
     id: 2,
-    title: 'Google Career Certificates Scholarship',
-    description: 'Up to 500 fully funded scholarship seats for the Google Career Certificates program in collaboration with Mero Job Limited & Google LLC.',
-    status: 'Ongoing',
-    thumbnail: '/images/events/Google.jpg',
-    href: '/google-career-certificates',
-    color: 'from-red-600 to-red-800',
-  },
-  {
-    id: 2,
     title: 'ICT Gyan',
     description: 'Knowledge-sharing platform providing ICT training and professional development with ICT related contents',
     status: 'Ongoing',
     thumbnail: '/images/events/ICT-Gyan.jpg',
     href: '/ict-gyan',
     color: 'from-blue-600 to-blue-800',
+  },
+  {
+    id: 3,
+    title: 'Google Career Certificates Scholarship',
+    description: 'Up to 500 fully funded scholarship seats for the Google Career Certificates program in collaboration with Mero Job Limited & Google LLC.',
+    status: 'Closed',
+    thumbnail: '/images/events/Googlehome.jpg',
+    href: '/google-career-certificates',
+    color: 'from-red-600 to-red-800',
   },
 ];
 
@@ -155,16 +155,26 @@ export default function UpcomingEventsSection() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
               </div>
               <div className="p-6">
-                <div className="mb-3 inline-flex rounded-full bg-green-100 px-3 py-1">
-                  <span className="text-xs font-semibold text-green-700">{activity.status}</span>
-                </div>
-                <h3 className="mb-3 text-xl font-bold text-body-text group-hover:text-primary transition-colors">
-                  {activity.title}
-                </h3>
-                <p className="text-sm text-body-text/70 line-clamp-2">
-                  {activity.description}
-                </p>
+              <div 
+                className={`mb-3 inline-flex rounded-full px-3 py-1 ${
+                  activity.status.toLowerCase() === 'ongoing' ? 'bg-green-100' : 'bg-yellow-100'
+                }`}
+              >
+                <span 
+                  className={`text-xs font-semibold ${
+                    activity.status.toLowerCase() === 'ongoing' ? 'text-green-700' : 'text-yellow-700'
+                  }`}
+                >
+                  {activity.status}
+                </span>
               </div>
+              <h3 className="mb-3 text-xl font-bold text-body-text group-hover:text-primary transition-colors">
+                {activity.title}
+              </h3>
+              <p className="text-sm text-body-text/70 line-clamp-2">
+                {activity.description}
+              </p>
+            </div>
             </Link>
           ))}
         </div>
@@ -194,7 +204,7 @@ export default function UpcomingEventsSection() {
               opacity: { duration: 0.5 },
             }}
           >
-            <div className="relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-md transition-all border border-gray-100">
+            <div className="relative overflow-hidden rounded-2xl bg-surface shadow-sm hover:shadow-md transition-all border border-gray-100">
               <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 p-6 md:p-10">
                 {/* Logo - 1 Column */}
                 <div className="flex-shrink-0 w-full md:w-1/4 flex items-center justify-center">
