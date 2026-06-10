@@ -23,20 +23,6 @@ export default function MediaSection() {
           </div>
         </section>
       )}
-
-      {/* Video Section */}
-      {/* {youtubeItems.length > 0 && (
-        <section className="py-4">
-          <div className="mx-auto max-w-7xl px-6">
-            <h2 className="mb-8 text-2xl font-semibold text-body-text">Video Library</h2>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {youtubeItems.map(item => (
-                <YouTubeCard key={item.id} url={item.url} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )} */}
     </>
   );
 }

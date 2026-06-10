@@ -18,8 +18,8 @@ export default function GoogleCareerCertificatesPage() {
           title="Google Career Certificates Scholarship Program"
           description="ICT Foundation Nepal (IFN), in collaboration with Mero Job Limited & Google LLC, is offering up to 500 fully funded scholarship seats for the Google Career Certificates program. Gain global competencies through Google-designed courses delivered via Coursera."
           imageSrc="/images/events/Google.jpg"
-          buttonText="Apply Now"
-          buttonLink="#apply"
+          buttonText="See Results"
+          buttonLink="#result"
         />
 
         {/* Overview */}
@@ -92,15 +92,17 @@ export default function GoogleCareerCertificatesPage() {
         </section>
 
         {/* CTA */}
-        <section id="apply" className="py-16 bg-gradient-to-r from-[#0E2557] to-[#1a3a7a] text-white">
+        <section id="result" className="py-16 bg-gradient-to-r from-[#0E2557] to-[#1a3a7a] text-white">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <h2 className="mb-4 text-3xl font-bold">Ready to Apply?</h2>
-            <p className="mb-6 text-lg text-gray-100">Apply for the Google Career Certificates scholarship through the form. Seats are limited.</p>
+            <h2 className="mb-4 text-3xl font-bold">Check Your Application Result</h2>
+            <p className="mb-6 text-lg text-gray-100">See if you've been selected for the Google Career Certificates scholarship.</p>
             <a
-              href="https://forms.gle/zbTDdUzGnYD5VP6i7"
+              href="/lucky_draw_winners.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-md bg-primary px-8 py-3 font-semibold text-white hover:opacity-95"
             >
-              Open Application Form
+              View Winners List
             </a>
           </div>
         </section>

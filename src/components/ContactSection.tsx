@@ -145,6 +145,7 @@ export default function ContactSection() {
                 type="email"
                 {...register('email')}
                 className="w-full rounded-xl border border-gray-200 bg-gray-50/50 px-4 py-3 text-[15px] transition-all focus:border-primary focus:bg-white"
+                suppressHydrationWarning
               />
               {errors.email && (
                 <p className="mt-1.5 text-sm text-red-500">{errors.email.message}</p>

@@ -33,7 +33,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: 'nidesh',
     name: 'Nidesh Maskey',
-    role: 'Tech Lead',
+    role: '',
     bio: '',
     photo: '/images/team/Nidesh-maskey.jpg',
     facebook: '',
@@ -108,7 +108,7 @@ export const teamMembers: TeamMember[] = [
     photo: '/images/team/Kabir Rajbanshi.jpg',
     facebook: 'https://facebook.com/rajkabir234',
     instagram: 'https://instagram.com/rkbr234',
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/kabir-rajbanshi-6717921b6/',
   },
   {
     id: 'riya',
