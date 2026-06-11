@@ -1,12 +1,16 @@
 "use client";
 import Header from '@/components/Header';
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ScholarshipAgreementForm() {
+  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-  // NEW STATE: Controls the visibility of the confirmation popup
   const [showConfirmPopup, setShowConfirmPopup] = useState(false);
+  
+  // NEW STATE: Controls the countdown timer for the success redirect
+  const [countdown, setCountdown] = useState(3);
 
   const [formData, setFormData] = useState({
     FullName: "",
@@ -25,19 +29,17 @@ export default function ScholarshipAgreementForm() {
     }));
   };
 
-  // 1. Initial submit handler just opens the confirmation popup
   const handleInitialSubmit = (e: FormEvent) => {
     e.preventDefault();
     setShowConfirmPopup(true);
   };
 
-  // 2. The actual submission logic is now here
   const executeSubmission = async () => {
-    setShowConfirmPopup(false); // Close the confirmation popup
+    setShowConfirmPopup(false);
     setIsSubmitting(true);
     setSubmitStatus("idle");
+    setCountdown(3); // Reset countdown on new submission attempt
 
-    // REPLACE WITH YOUR ACTUAL GOOGLE WEB APP URL
     const GOOGLE_WEBAPP_URL = "https://script.google.com/macros/s/AKfycbxig5m2iUT8hxPU2RiLEdNsfjPfhQ5d9PFm2YIMg40Ar0kBH6tfCZ8o1okuVkgiBvOWGg/exec";
 
     try {
@@ -67,6 +69,26 @@ export default function ScholarshipAgreementForm() {
     }
   };
 
+  // NEW EFFECT: Handles the timed redirect upon successful submission
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (submitStatus === "success") {
+      timer = setInterval(() => {
+        setCountdown((prev) => {
+          if (prev <= 1) {
+            clearInterval(timer);
+            router.push("/"); // Automatically redirect to homepage
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => {
+      if (timer) clearInterval(timer);
+    };
+  }, [submitStatus, router]);
+
   return (
     <>
     <Header />
@@ -84,7 +106,6 @@ export default function ScholarshipAgreementForm() {
             <h3 className="text-xl font-medium text-gray-900 mb-2">Confirm Submission</h3>
             <p className="text-gray-600 mb-6">Have you read all the terms, conditions, and policies properly?</p>
             
-            {/* Action Buttons inside Confirmation Popup */}
             <div className="flex flex-col space-y-3 mt-2">
               <button
                 onClick={executeSubmission}
@@ -103,7 +124,7 @@ export default function ScholarshipAgreementForm() {
         </div>
       )}
 
-      {/* --- EXISTING SUCCESS/ERROR POPUP OVERLAY SECTION --- */}
+      {/* --- SUCCESS/ERROR POPUP OVERLAY SECTION --- */}
       {submitStatus !== "idle" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm transition-opacity">
           <div className="bg-white rounded-xl shadow-2xl w-full max-w-sm p-6 text-center transform transition-all">
@@ -115,7 +136,17 @@ export default function ScholarshipAgreementForm() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-medium text-gray-900 mb-2">Success!</h3>
-                <p className="text-gray-600 mb-6">Your responses have been successfully recorded.</p>
+                <p className="text-gray-600 mb-2">Your responses have been successfully recorded.</p>
+                <p className="text-sm text-[#0B57D0] font-medium mb-6">Redirecting to homepage in {countdown}s...</p>
+                
+                <div className="flex flex-col space-y-3 mt-2">
+                  <button
+                    onClick={() => router.push("/")}
+                    className="w-full inline-block bg-[#0B57D0] hover:bg-[#0948A7] text-white font-medium py-2.5 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B57D0]"
+                  >
+                    Go to Homepage Now
+                  </button>
+                </div>
               </>
             ) : (
               <>
@@ -126,27 +157,17 @@ export default function ScholarshipAgreementForm() {
                 </div>
                 <h3 className="text-xl font-medium text-gray-900 mb-2">Submission Error</h3>
                 <p className="text-gray-600 mb-6">There was an error submitting your form. Please try again.</p>
+                
+                <div className="flex flex-col space-y-3 mt-2">
+                  <button
+                    onClick={() => setSubmitStatus("idle")}
+                    className="w-full inline-block bg-[#0B57D0] hover:bg-[#0948A7] text-white font-medium py-2.5 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B57D0]"
+                  >
+                    Go back to form
+                  </button>
+                </div>
               </>
             )}
-            
-            {/* Action Buttons inside Popup */}
-            <div className="flex flex-col space-y-3 mt-2">
-              <a
-                href="https://ictfoundation.org.np/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-block bg-[#0B57D0] hover:bg-[#0948A7] text-white font-medium py-2.5 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B57D0]"
-              >
-                Visit IFN Website
-              </a>
-              <button
-                onClick={() => setSubmitStatus("idle")}
-                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
-              >
-                Close
-              </button>
-            </div>
-
           </div>
         </div>
       )}
@@ -163,7 +184,6 @@ export default function ScholarshipAgreementForm() {
           />
         </div>
 
-        {/* Change form onSubmit to handleInitialSubmit */}
         <form onSubmit={handleInitialSubmit} className="space-y-6">
           
           {/* Main Title Card */}

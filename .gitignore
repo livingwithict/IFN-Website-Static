@@ -46,3 +46,5 @@ public/preview/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/graphify-out

@@ -3,7 +3,7 @@
 import { FiArrowRight } from 'react-icons/fi';
 import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
-import MediaCard from './MediaCard';
+import ArticleCard from './ArticleCard';
 import { allMediaItems } from '@/data/media';
 import YouTubeCard from '@/components/YouTubeCard';
 
@@ -24,7 +24,7 @@ export default function NewsAndBlogsSection() {
       <div className="mb-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {firstFourMedia.map((item) => (
-            <MediaCard key={item.id} item={item} />
+            <ArticleCard key={item.id} url={item.url} />
           ))}
         </div>
         <div className="mt-10 flex justify-center">

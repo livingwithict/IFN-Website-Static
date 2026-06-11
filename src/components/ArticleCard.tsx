@@ -1,14 +1,14 @@
 'use client';
 
 import React from 'react';
-import { useMetadata } from '@/hooks/useMetadata';
+import { useArticleMetadata } from '@/hooks/articleMetadata';
 
 interface ArticleCardProps {
   url: string;
 }
 
 export default function ArticleCard({ url }: ArticleCardProps) {
-  const { title, thumbnail, isLoading } = useMetadata(url);
+  const { title, thumbnail, isLoading } = useArticleMetadata(url);
 
   return (
     <a

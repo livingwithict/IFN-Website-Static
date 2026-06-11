@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { useMetadata } from '@/hooks/useMetadata';
+import { useYouTubeMetadata } from '@/hooks/youtubeMetadata';
 import { extractYouTubeId, getYouTubeThumbnail } from '@/data/media';
 
 interface YouTubeCardProps {
@@ -10,7 +10,7 @@ interface YouTubeCardProps {
 }
 
 export default function YouTubeCard({ url, className = '' }: YouTubeCardProps) {
-  const { title, thumbnail, isLoading } = useMetadata(url, 'YouTube Video');
+  const { title, thumbnail, isLoading } = useYouTubeMetadata(url, 'YouTube Video');
   const videoId = extractYouTubeId(url);
   const fallbackThumbnail = videoId ? getYouTubeThumbnail(videoId) : '';
 

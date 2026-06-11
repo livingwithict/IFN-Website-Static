@@ -25,7 +25,7 @@ export default function Home() {
         <NewsAndBlogsSection />
         {/* <ReachSection /> */}
         {/* <CollaboratorsSection /> */}
-        <SupportInnovationCTA />
+        {/* <SupportInnovationCTA /> */}
         <ContactSection />
       </main>
       <Footer />
