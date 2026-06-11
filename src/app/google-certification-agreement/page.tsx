@@ -5,6 +5,8 @@ import { useState, FormEvent } from "react";
 export default function ScholarshipAgreementForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  // NEW STATE: Controls the visibility of the confirmation popup
+  const [showConfirmPopup, setShowConfirmPopup] = useState(false);
 
   const [formData, setFormData] = useState({
     FullName: "",
@@ -23,8 +25,15 @@ export default function ScholarshipAgreementForm() {
     }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  // 1. Initial submit handler just opens the confirmation popup
+  const handleInitialSubmit = (e: FormEvent) => {
     e.preventDefault();
+    setShowConfirmPopup(true);
+  };
+
+  // 2. The actual submission logic is now here
+  const executeSubmission = async () => {
+    setShowConfirmPopup(false); // Close the confirmation popup
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
@@ -63,8 +72,38 @@ export default function ScholarshipAgreementForm() {
     <Header />
     <div className="min-h-screen bg-slate-50 py-8 px-4 sm:px-6 lg:px-8 font-sans relative">
       
-      {/* --- POPUP OVERLAY SECTION --- */}
-      {/* --- POPUP OVERLAY SECTION --- */}
+      {/* --- CONFIRMATION POPUP OVERLAY --- */}
+      {showConfirmPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm transition-opacity">
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-sm p-6 text-center transform transition-all">
+            <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-4">
+              <svg className="h-8 w-8 text-[#0B57D0]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-medium text-gray-900 mb-2">Confirm Submission</h3>
+            <p className="text-gray-600 mb-6">Have you read all the terms, conditions, and policies properly?</p>
+            
+            {/* Action Buttons inside Confirmation Popup */}
+            <div className="flex flex-col space-y-3 mt-2">
+              <button
+                onClick={executeSubmission}
+                className="w-full inline-block bg-[#0B57D0] hover:bg-[#0948A7] text-white font-medium py-2.5 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0B57D0]"
+              >
+                Yes
+              </button>
+              <button
+                onClick={() => setShowConfirmPopup(false)}
+                className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 px-4 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200"
+              >
+                Go back to the form
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* --- EXISTING SUCCESS/ERROR POPUP OVERLAY SECTION --- */}
       {submitStatus !== "idle" && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm transition-opacity">
           <div className="bg-white rounded-xl shadow-2xl w-full max-w-sm p-6 text-center transform transition-all">
@@ -112,7 +151,6 @@ export default function ScholarshipAgreementForm() {
         </div>
       )}
       {/* ----------------------------- */}
-      {/* ----------------------------- */}
 
       <div className="max-w-3xl mx-auto space-y-6">
         
@@ -125,7 +163,8 @@ export default function ScholarshipAgreementForm() {
           />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Change form onSubmit to handleInitialSubmit */}
+        <form onSubmit={handleInitialSubmit} className="space-y-6">
           
           {/* Main Title Card */}
           <div className="bg-white rounded-lg shadow-sm border-t-8 border-[#0B57D0] p-6 sm:p-8">
