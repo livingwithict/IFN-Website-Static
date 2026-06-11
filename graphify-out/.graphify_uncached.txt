@@ -1,0 +1,176 @@
+/home/dhiraj/work/IFN-Website-Static/docs/5_hero_section.tsx
+/home/dhiraj/work/IFN-Website-Static/docs/6_contact_api_route.ts
+/home/dhiraj/work/IFN-Website-Static/docs/7_Client‑Side Contact Form (React Hook Form + Zod).tsx
+/home/dhiraj/work/IFN-Website-Static/docs/8_Scroll‑Triggered Section Animation Setup.tsx
+/home/dhiraj/work/IFN-Website-Static/eslint.config.mjs
+/home/dhiraj/work/IFN-Website-Static/next.config.js
+/home/dhiraj/work/IFN-Website-Static/package.json
+/home/dhiraj/work/IFN-Website-Static/postcss.config.mjs
+/home/dhiraj/work/IFN-Website-Static/server.js
+/home/dhiraj/work/IFN-Website-Static/src/app/about-ifn/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/api/contact/route.ts
+/home/dhiraj/work/IFN-Website-Static/src/app/collaboration/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/collaboration/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-karnali-conclave/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-karnali-conclave/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-leadership-dialogue/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-leadership-dialogue/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-madhesh-conclave/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-madhesh-conclave/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-nepal-conclave/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-nepal-conclave/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-samvad/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/digital-samvad/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/events/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/google-career-certificates/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/google-career-certificates/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/google-certification-agreement/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/google-certification-agreement/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/ict-award/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/ict-award/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/ict-gyan/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/ict-gyan/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/ideafest/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/ideafest/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/incubation/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/incubation/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/nepal-ai-summit/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/nepal-ai-summit/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/news-and-media/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/news-and-media/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/pre-budget-ict-discourse/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/pre-budget-ict-discourse/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/publications/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/support-innovation/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/team/layout.tsx
+/home/dhiraj/work/IFN-Website-Static/src/app/team/page.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/AboutSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/AnimatedSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/BackToTop.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/CollaboratorsGrid.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/CollaboratorsSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/ContactSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/EventHero.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/EventPageHero.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/Footer.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/Header.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/HeaderDark.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/HeroSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/InitiativesSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/MediaCard.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/NewsAndBlogsSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/NewsCard.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/PatronsGrid.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/PublicationsSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/ReachSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/ScrollToTop.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/SlideshowHero.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/SupportInnovationCTA.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/TeamCard.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/TeamHero.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/UnifiedMediaSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/UpcomingEventsSection.tsx
+/home/dhiraj/work/IFN-Website-Static/src/components/youtubecard.tsx
+/home/dhiraj/work/IFN-Website-Static/src/data/collaborators.ts
+/home/dhiraj/work/IFN-Website-Static/src/data/events.ts
+/home/dhiraj/work/IFN-Website-Static/src/data/media.ts
+/home/dhiraj/work/IFN-Website-Static/src/data/patrons.ts
+/home/dhiraj/work/IFN-Website-Static/src/data/publication.ts
+/home/dhiraj/work/IFN-Website-Static/src/data/team.ts
+/home/dhiraj/work/IFN-Website-Static/src/data/types.ts
+/home/dhiraj/work/IFN-Website-Static/src/hooks/useMetadata.ts
+/home/dhiraj/work/IFN-Website-Static/tsconfig.json
+/home/dhiraj/work/IFN-Website-Static/AGENTS.md
+/home/dhiraj/work/IFN-Website-Static/README.md
+/home/dhiraj/work/IFN-Website-Static/docs/1_architecture.md
+/home/dhiraj/work/IFN-Website-Static/docs/2_ui_ux.md
+/home/dhiraj/work/IFN-Website-Static/docs/3_design_aspects.md
+/home/dhiraj/work/IFN-Website-Static/docs/4_global_css.txt
+/home/dhiraj/work/IFN-Website-Static/docs/EVENT_PAGES_TEMPLATE.md
+/home/dhiraj/work/IFN-Website-Static/public/lucky_draw_winners.pdf
+/home/dhiraj/work/IFN-Website-Static/public/file.svg
+/home/dhiraj/work/IFN-Website-Static/public/globe.svg
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Government/DoIT.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Government/IEDI.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Government/MoCIT.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Government/NTA.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Industry/can.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Industry/fncci.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Industry/nasit.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Industry/nast.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Industry/ncc.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/Industry/upGrad.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/International/Huawei.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/International/inDrive.png
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/International/taf.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/collab/International/upGrad.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/digital-samvad.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/dkc-logo.png
+/home/dhiraj/work/IFN-Website-Static/public/images/dld-logo.png
+/home/dhiraj/work/IFN-Website-Static/public/images/dmc-logo.png
+/home/dhiraj/work/IFN-Website-Static/public/images/dnc-logo.png
+/home/dhiraj/work/IFN-Website-Static/public/images/events/AISummit.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/Conclave.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/DKC.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/DLD.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/DMC.JPG
+/home/dhiraj/work/IFN-Website-Static/public/images/events/Google.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/Googlehome.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/ICT-Gyan.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/ICTAward.JPG
+/home/dhiraj/work/IFN-Website-Static/public/images/events/Incubation.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/PreBudget.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/Samvad.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/events/Startup-Idea.JPG
+/home/dhiraj/work/IFN-Website-Static/public/images/events/banner.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/hero/hero-1.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/hero/hero-2.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/hero/hero-3.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/hero/hero-4.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/hero/hero-5.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/ict-award.png
+/home/dhiraj/work/IFN-Website-Static/public/images/ict-gyan-logo.png
+/home/dhiraj/work/IFN-Website-Static/public/images/logo-white.png
+/home/dhiraj/work/IFN-Website-Static/public/images/logo.png
+/home/dhiraj/work/IFN-Website-Static/public/images/naic.png
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Ananda Raj Khanal.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Birendra Mishra.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Ganesh Shah.JPG
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Guna Keshari.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Manish Pokharel.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Manohar Bhattarai.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Subarna Shakya.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/Vivek Rana.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/patrons/member image.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/Budget-Recomendation.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/DNC-22-report.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/DNC-23-report.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/DNC-24-report.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/Digital-Paridisya-1.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/Digital-Paridisya-2.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/Event-Pre-Budget.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/eGovernace.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/inventory.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/publications/placeholder.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/snif.png
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Hariram Rimal.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Hempal Shrestha.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/IMG_2517.JPG
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Kabir Rajbanshi.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Krishpana Poudel.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Nidesh-maskey.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Rachana Kharel.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Razan-Lamsal.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Resham Bhandari.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Riya Kafle 2.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Riya Kafle.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Sujal Bhakta Shrestha.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/Sushil Pokharel.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/team/member image.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/thumbnail.jpg
+/home/dhiraj/work/IFN-Website-Static/public/images/wsis.png
+/home/dhiraj/work/IFN-Website-Static/public/next.svg
+/home/dhiraj/work/IFN-Website-Static/public/vercel.svg
+/home/dhiraj/work/IFN-Website-Static/public/window.svg

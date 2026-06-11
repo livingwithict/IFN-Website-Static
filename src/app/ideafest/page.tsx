@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import EventPageHero from '@/components/EventPageHero';
-import YouTubeCard from '@/components/youtubecard';
+import YouTubeCard from '@/components/YouTubeCard';
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 

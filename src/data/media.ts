@@ -73,3 +73,7 @@ export function extractYouTubeId(url: string): string {
   const match = url.match(regExp);
   return match && match[7].length === 11 ? match[7] : '';
 }
+
+export function getYouTubeThumbnail(videoId: string): string {
+  return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+}

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import AnimatedSection from './AnimatedSection';
 import MediaCard from './MediaCard';
 import { allMediaItems } from '@/data/media';
-import YouTubeCard from '@/components/youtubecard';
+import YouTubeCard from '@/components/YouTubeCard';
 
 export default function NewsAndBlogsSection() {
   const firstFourMedia = allMediaItems.slice(0, 4);

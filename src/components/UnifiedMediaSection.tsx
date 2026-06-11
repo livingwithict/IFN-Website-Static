@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import MediaCard from './MediaCard';
-import YouTubeCard from './youtubecard';
 import { allMediaItems } from '@/data/media';
 
 export default function MediaSection() {

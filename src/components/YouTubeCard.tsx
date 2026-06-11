@@ -2,22 +2,17 @@
 
 import React from 'react';
 import { useMetadata } from '@/hooks/useMetadata';
-import { extractYouTubeId } from '@/data/media';
+import { extractYouTubeId, getYouTubeThumbnail } from '@/data/media';
 
 interface YouTubeCardProps {
   url: string;
   className?: string;
 }
 
-const DEFAULT_THUMBNAIL =
-  '';
-
 export default function YouTubeCard({ url, className = '' }: YouTubeCardProps) {
   const { title, thumbnail, isLoading } = useMetadata(url, 'YouTube Video');
   const videoId = extractYouTubeId(url);
-  const fallbackThumbnail = videoId
-    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-    : DEFAULT_THUMBNAIL;
+  const fallbackThumbnail = videoId ? getYouTubeThumbnail(videoId) : '';
 
   return (
     <a
