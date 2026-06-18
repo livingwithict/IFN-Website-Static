@@ -1,0 +1,61 @@
+
+---
+
+## 4. Recovered Contents (`contents.md`)
+
+```markdown
+# ICT Foundation Nepal – Recovered Content
+
+All content below was extracted from the archived website. While the CMS will hold this data, here it is for initial migration.
+
+## Site Identity
+- **Organization Name**: ICT Foundation Nepal
+- **Logo URL**: `/wp-content/uploads/2021/08/IFN-final-Logo1.png`
+- **Favicon**: (not recoverable, use logo as basis)
+
+## Hero Section
+- **Tagline**: "Elevating Nepal: Pioneering Digital Progress Together."
+- **Background Image**: `image_ifn.jpg` (full-screen, people/technology theme)
+- **Button Text**: "Contact Us" (links to #contact)
+
+## About IFN
+- **Heading**: "About IFN"
+- **Body**: *[The full text was not captured in plain form, but likely described the foundation’s mission to advance digital literacy, research, and innovation in Nepal. Use placeholder and retrieve from client.]*
+
+## Our Publications
+List of publications with cover images and caption names:
+1. Title: “ICT Inventory Survey”
+2. Title: “Digital Readiness Report” (example, actual names must match images)
+*(Actual images available from archive, e.g., `/wp-content/uploads/2025/06/pub1.jpg` etc.)*
+
+## Upcoming Events
+- **Event Title**: "Digital Nepal Conclave 2025"
+- **Description**: *[Not fully recovered]*
+- **Date**: *[Check archive, if not visible, leave as TBD]*
+
+## Research and Survey
+- **Report Title**: "eGovernance Assessment and Stocktaking Study in Nepal - 2081"
+- **Cover Image**: Retrieved from archive.
+- **Download Link**: PDF file.
+
+## How We May Assist You?
+Three assistance items (exact wording unknown, but can be derived):
+1. **Mentorship** – Guiding startups and students.
+2. **Technical Support** – Providing resources and expertise.
+3. **Consultation** – Advising on digital policy.
+*(Placeholder text; client will replace in CMS.)*
+
+## Contact Information
+- **Registration Number**: 261776/077/078
+- **Address**: Baneshwor, Kathmandu, Nepal
+- **Phone Numbers**: 9851141348, 9801263601, 9801263604
+- **Emails**: admin@ictfoundation.org.np (general), research@ictfoundation.org.np (surveys)
+- **Form Fields**: Name, Email, Subject, Message
+
+## Footer
+- **Social Text**: "Find us on"
+- **Social Links**: Placeholder URLs for Facebook, Twitter, LinkedIn.
+- **Copyright**: "© [Year] ICT Foundation Nepal"
+
+## Image Assets
+All images (logo, hero background, publication covers, report covers, assistance icons) should be downloaded from the Web Archive’s media directory and uploaded to the CMS media library.
