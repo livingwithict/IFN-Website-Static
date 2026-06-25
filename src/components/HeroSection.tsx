@@ -15,10 +15,10 @@ import SlideshowHero from './SlideshowHero';
 import { LuBookOpenCheck, LuMap } from 'react-icons/lu';
 
 const stats = [
-  { value: '10+', label: 'Programs Successfully Conducted', icon: FaTasks },
+  { value: '25+', label: 'Programs Successfully Conducted', icon: FaTasks },
   { value: '7', label: 'Provinces Actively Covered', icon: FaMapMarkerAlt },
-  { value: '15+', label: 'Municipalities (Palikas) Reached', icon: FaCity },
-  { value: '3+', label: 'Research Studies Completed', icon: LuBookOpenCheck },
+  { value: '50+', label: 'Municipalities (Palikas) Reached', icon: FaCity },
+  { value: '5+', label: 'Research Studies Completed', icon: LuBookOpenCheck },
 ];
 
 const initiatives = [
