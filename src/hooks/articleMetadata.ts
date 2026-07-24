@@ -7,7 +7,7 @@ interface MetadataCache {
 
 const metadataCache = new Map<string, MetadataCache>();
 
-const DEFAULT_THUMBNAIL = '/public/images/thumbnail.jpg';
+const DEFAULT_THUMBNAIL = '/images/thumbnail.jpg';
 
 export function useArticleMetadata(url: string, defaultTitle: string = 'Article') {
   const [metadata, setMetadata] = useState<MetadataCache>({
@@ -31,18 +31,44 @@ export function useArticleMetadata(url: string, defaultTitle: string = 'Article'
     const fetchMetadata = async () => {
       try {
         let finalTitle = defaultTitle;
-        let finalThumbnail = DEFAULT_THUMBNAIL;
+        let finalThumbnail = '';
 
-        const backendUrl = `/api/fetch-og.php?url=${encodeURIComponent(url)}`;
-        const response = await fetch(backendUrl);
-        
-        if (response.ok) {
-          const data = await response.json();
-          
-          if (!data.error) {
-            finalTitle = data.title || defaultTitle;
-            finalThumbnail = data.image || DEFAULT_THUMBNAIL;
+        // Try free unfurling APIs in order, first good result wins.
+        const apis = [
+          {
+            url: `https://api.microlink.io/?url=${encodeURIComponent(url)}`,
+            parse: (data: any) => ({
+              title: data.data?.title,
+              image: data.data?.image?.url || data.data?.logo?.url,
+            }),
+          },
+          {
+            url: `https://noembed.com/embed?url=${encodeURIComponent(url)}`,
+            parse: (data: any) => ({
+              title: data.title,
+              image: data.thumbnail_url,
+            }),
+          },
+        ];
+
+        for (const api of apis) {
+          try {
+            const response = await fetch(api.url);
+            if (!response.ok) continue;
+            const data = await response.json();
+            const parsed = api.parse(data);
+            if (parsed.title || parsed.image) {
+              finalTitle = parsed.title || defaultTitle;
+              finalThumbnail = parsed.image || '';
+              break;
+            }
+          } catch {
+            continue;
           }
+        }
+
+        if (!finalThumbnail) {
+          finalThumbnail = DEFAULT_THUMBNAIL;
         }
 
         const cached: MetadataCache = { title: finalTitle, thumbnail: finalThumbnail };

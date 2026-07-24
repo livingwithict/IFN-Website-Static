@@ -8,7 +8,7 @@ interface MetadataCache {
 
 const metadataCache = new Map<string, MetadataCache>();
 
-const DEFAULT_THUMBNAIL = '/public/images/thumbnail.jpg';
+const DEFAULT_THUMBNAIL = '/images/thumbnail.jpg';
 
 export function useYouTubeMetadata(url: string, defaultTitle: string = 'Video') {
   const [metadata, setMetadata] = useState<MetadataCache>({
@@ -36,7 +36,6 @@ export function useYouTubeMetadata(url: string, defaultTitle: string = 'Video') 
 
         const videoId = extractYouTubeId(url);
         if (videoId) {
-          // Try oEmbed first (works on localhost)
           try {
             const res = await fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`);
             if (res.ok) {
@@ -44,22 +43,9 @@ export function useYouTubeMetadata(url: string, defaultTitle: string = 'Video') 
               finalTitle = data.title || defaultTitle;
             }
           } catch (error) {
-            console.warn('oEmbed failed, trying CORS proxy...');
-            
-            // Fallback to CORS proxy for production servers
-            try {
-              const proxyUrl = `https://corsproxy.io/?url=${encodeURIComponent(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`)}`;
-              const res = await fetch(proxyUrl);
-              if (res.ok) {
-                const data = await res.json();
-                finalTitle = data.title || defaultTitle;
-              }
-            } catch (proxyError) {
-              console.error('CORS proxy also failed:', proxyError);
-              // Title stays as defaultTitle
-            }
+            console.error('oEmbed fetch failed:', error);
           }
-          
+
           finalThumbnail = getYouTubeThumbnail(videoId);
         }
 

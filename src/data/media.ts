@@ -28,11 +28,11 @@ export const allMediaItems: MediaItem[] = [
     url: 'https://ictsamachar.com/news/pre-budget-ict-discourse-2083--emphasis-on-policy/',
     type: 'news',
   },
-  {
-    id: 'news-006',
-    url: 'https://english.hamropatro.com/news/details/8521098159029999?ns=',
-    type: 'news',
-  },
+  // {
+  //   id: 'news-006',
+  //   url: 'https://english.hamropatro.com/news/details/8521098159029999?ns=',
+  //   type: 'news',
+  // },
   {
     id: 'news-007',
     url: 'https://ictsamachar.com/news/government-private-sector-on-one-platform--ict-discourse/',
