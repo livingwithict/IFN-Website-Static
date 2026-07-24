@@ -120,6 +120,16 @@ export const teamMembers: TeamMember[] = [
     instagram: 'https://www.instagram.com/riyakafle__r/',
     linkedin: 'https://www.linkedin.com/in/riya-kafle-5579842b6/',
   },
+  {
+    id: 'bishranta',
+    name: 'Bishranta Regmi',
+    role: 'Admin & Accounts',
+    bio: '',
+    photo: '/images/team/bishranta-regmi.jpg',
+    facebook: 'https://www.facebook.com/bishranta.regmi/',
+    instagram: 'https://www.instagram.com/bishranta_/',
+    linkedin: 'https://www.linkedin.com/in/bishrantaregmi/',
+  },
 ];
 
 export default teamMembers;
