@@ -65,7 +65,7 @@ export default function DigitalSamvad() {
         
         <section>
           <div className="mt-10 my-10 mx-auto max-w-4xl px-6">
-            <Link href="https://nepal-ai.org" className="inline-flex items-center gap-2 rounded-lg gradient-primary px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-primary/20 transition-all hover:shadow-md hover:shadow-primary/25 hover:brightness-110">
+            <Link href="https://digitalsamvad.org/" className="inline-flex items-center gap-2 rounded-lg gradient-primary px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-primary/20 transition-all hover:shadow-md hover:shadow-primary/25 hover:brightness-110">
               Learn More
               <FiArrowRight className="h-4 w-4" />
             </Link>
