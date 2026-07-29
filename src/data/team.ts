@@ -123,12 +123,22 @@ export const teamMembers: TeamMember[] = [
   {
     id: 'bishranta',
     name: 'Bishranta Regmi',
-    role: 'Admin & Accounts',
+    role: 'Web & Tech',
     bio: '',
     photo: '/images/team/bishranta-regmi.jpg',
     facebook: 'https://www.facebook.com/bishranta.regmi/',
     instagram: 'https://www.instagram.com/bishranta_/',
     linkedin: 'https://www.linkedin.com/in/bishrantaregmi/',
+  },
+  {
+    id: 'yanee',
+    name: 'Yanee Lama',
+    role: 'Design & Creatives',
+    bio: '',
+    photo: '/images/team/Yanee Lama.jpg',
+    facebook: '',
+    instagram: '',
+    linkedin: '',
   },
 ];
 
