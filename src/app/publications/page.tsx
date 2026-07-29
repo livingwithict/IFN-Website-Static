@@ -2,7 +2,7 @@ import Header from '@/components/HeaderDark';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
 import Image from 'next/image';
-import { FiDownload, FiExternalLink } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 import { publications, governmentResearch } from '@/data/publication';
 
 export const metadata = {
@@ -38,7 +38,7 @@ export default function PublicationsPage() {
                 Event Reports
               </h2>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-5">
               {publications.map((pub) => (
                 <a
                   key={pub.title}
@@ -84,12 +84,6 @@ export default function PublicationsPage() {
                     {/* <p className="mb-3 text-xs text-body-text/60 line-clamp-2">
                       {pub.description}
                     </p> */}
-                    <div className="flex items-center justify-between">
-                      {/* <span className="text-xs font-medium text-primary/70">
-                        {pub.category}
-                      </span> */}
-                      <FiDownload className="h-4 w-4 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
-                    </div>
                   </div>
                 </a>
               ))}
@@ -102,7 +96,7 @@ export default function PublicationsPage() {
         <section className="py-4 md:py-8">
           <div className="mx-auto max-w-7xl px-6">
             <h2 className="mb-8 text-2xl font-semibold text-body-text">Government Research</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-6 lg:grid-cols-5">
               {governmentResearch.map((research) => (
                 <a
                   key={research.title}
@@ -148,12 +142,6 @@ export default function PublicationsPage() {
                     {/* <p className="mb-3 text-xs text-body-text/60 line-clamp-2">
                       {research.description}
                     </p> */}
-                    <div className="flex items-center justify-between">
-                      {/* <span className="text-xs font-medium text-primary/70">
-                        {research.category}
-                      </span> */}
-                      <FiDownload className="h-4 w-4 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
-                    </div>
                   </div>
                 </a>
               ))}

@@ -50,7 +50,7 @@ export default function PublicationsSection() {
       {/* Reports & Publications */}
       <div className="mb-4">
         {/* <h3 className="mb-8 text-2xl font-semibold text-body-text">Reports & Publications</h3> */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
           {reports.map((report) => (
             <a
               key={report.title}

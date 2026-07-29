@@ -22,7 +22,7 @@ export default function TeamPage() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
           {teamMembers.map((m) => (
             <TeamCard
               key={m.id}
