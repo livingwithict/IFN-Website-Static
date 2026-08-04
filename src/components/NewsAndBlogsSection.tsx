@@ -24,7 +24,7 @@ export default function NewsAndBlogsSection() {
       <div className="mb-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {firstFourMedia.map((item) => (
-            <ArticleCard key={item.id} url={item.url} />
+            <ArticleCard key={item.id} url={item.url} staticTitle={item.title} staticThumbnail={item.thumbnail} />
           ))}
         </div>
         <div className="mt-10 flex justify-center">

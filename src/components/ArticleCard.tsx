@@ -5,10 +5,16 @@ import { useArticleMetadata } from '@/hooks/articleMetadata';
 
 interface ArticleCardProps {
   url: string;
+  staticTitle?: string;
+  staticThumbnail?: string;
 }
 
-export default function ArticleCard({ url }: ArticleCardProps) {
-  const { title, thumbnail, isLoading } = useArticleMetadata(url);
+export default function ArticleCard({ url, staticTitle, staticThumbnail }: ArticleCardProps) {
+  const hasStaticData = Boolean(staticTitle && staticThumbnail);
+  const fetched = useArticleMetadata(hasStaticData ? '' : url);
+  const title = staticTitle ?? fetched.title;
+  const thumbnail = staticThumbnail ?? fetched.thumbnail;
+  const isLoading = hasStaticData ? false : fetched.isLoading;
 
   return (
     <a
