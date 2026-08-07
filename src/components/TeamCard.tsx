@@ -22,9 +22,15 @@ export default function TeamCard({ name, role, bio, photo, facebook, instagram, 
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.45, ease: 'easeOut' }}
       whileHover={{ y: -6 }}
-      className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg"
+      // easter egg: the dev's own card double-clicks through to their site
+      onDoubleClick={
+        name === 'Bishranta Regmi'
+          ? () => window.open('https://bishranta.com.np', '_blank', 'noopener,noreferrer')
+          : undefined
+      }
+      className="rounded-xl border border-gray-100 bg-white p-4 text-center shadow-sm transition-shadow duration-300 hover:shadow-lg sm:p-6"
     >
-      <div className="relative mx-auto mb-4 h-50 w-50 rounded-full overflow-hidden">
+      <div className="relative mx-auto mb-4 aspect-square w-full max-w-[200px] rounded-full overflow-hidden">
         <Image
           src={photo}
           alt={name}

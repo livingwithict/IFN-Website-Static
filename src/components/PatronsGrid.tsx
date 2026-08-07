@@ -14,7 +14,7 @@ export default function PatronsGrid() {
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 [&>*]:w-[calc(50%-0.5rem)] sm:[&>*]:w-[calc(50%-0.75rem)] md:[&>*]:w-[calc(33.333%-1rem)] lg:[&>*]:w-[calc(25%-1.125rem)]">
         {patrons.map((p) => (
           <motion.article
             key={p.id}
@@ -22,9 +22,9 @@ export default function PatronsGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
-            className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            className="rounded-xl border border-gray-100 bg-white p-4 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg sm:p-6"
           >
-            <div className="relative mx-auto mb-4 h-50 w-50 rounded-full overflow-hidden">
+            <div className="relative mx-auto mb-4 aspect-square w-full max-w-[200px] rounded-full overflow-hidden">
               <Image
                 src={p.photo}
                 alt={p.name}

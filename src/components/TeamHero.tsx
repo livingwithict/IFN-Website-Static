@@ -60,7 +60,7 @@ export default function TeamHero() {
           <div className="relative">
             <div className="absolute -left-8 top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
             <div className="overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 shadow-2xl shadow-slate-200/50">
-              <div className="relative h-[420px] w-full">
+              <div className="relative aspect-3/2 w-full">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={slide.id}
